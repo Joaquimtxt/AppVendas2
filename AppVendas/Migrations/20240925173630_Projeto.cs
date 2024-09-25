@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace AppVendas.Migrations
 {
     /// <inheritdoc />
-    public partial class Inicial : Migration
+    public partial class Projeto : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -16,7 +16,7 @@ namespace AppVendas.Migrations
                 columns: table => new
                 {
                     CategoriaId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    CategoriaNome = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    CategoriaNome = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -44,10 +44,10 @@ namespace AppVendas.Migrations
                 columns: table => new
                 {
                     ProdutoId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    ProdutoNome = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ProdutoNome = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Valor = table.Column<double>(type: "float", nullable: false),
                     QtadeEstoque = table.Column<double>(type: "float", nullable: false),
-                    CadastroAtivo = table.Column<bool>(type: "bit", nullable: false),
+                    CadastroAtivo = table.Column<bool>(type: "bit", nullable: true),
                     CategoriaId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
