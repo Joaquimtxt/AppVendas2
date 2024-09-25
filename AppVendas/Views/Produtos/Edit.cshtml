@@ -46,11 +46,18 @@
         </div>
         <div class="col-md mt-2">
 
-            <label>Cadastro Ativo</label>
-            <select class="form-select" id="CadastroAtivo" name="CadastroAtivo">
-                <option selected>Selecione...</option>
-                <option value="true">Sim</option>
-                <option value="false">Não</option>
+            <label asp-for="CadastroAtivo" class="control-label">Cadastro Ativo</label>
+            <select class="control" name="CadastroAtivo">
+                @if (Model.CadastroAtivo == true)
+                {
+                    <option value="true" selected>Sim</option>
+                    <option value="false">Não</option>
+                }
+                else
+                {
+                    <option value="true">Sim</option>
+                    <option value="false" selected>Não</option>
+                }
             </select>
 
         </div>
