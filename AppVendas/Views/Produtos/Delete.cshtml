@@ -8,40 +8,40 @@
 
 <h3 class="mt-3 mb-3">Deseja excluir esse cadastro?</h3>
 <div>
-    
+
     <dl class="row">
-        <dt class = "col-3">
+        <dt class="col-3">
             @Html.DisplayNameFor(model => model.ProdutoNome)
         </dt>
-        <dd class = "col-9">
+        <dd class="col-9">
             @Html.DisplayFor(model => model.ProdutoNome)
         </dd>
-        <dt class = "col-3">
+        <dt class="col-3">
             @Html.DisplayNameFor(model => model.Valor)
         </dt>
-        <dd class = "col-9">
+        <dd class="col-9">
             @Html.DisplayFor(model => model.Valor)
         </dd>
-        <dt class = "col-3">
+        <dt class="col-3">
             @Html.DisplayNameFor(model => model.QtadeEstoque)
         </dt>
-        <dd class = "col-9">
+        <dd class="col-9">
             @Html.DisplayFor(model => model.QtadeEstoque)
         </dd>
-        <dt class = "col-3">
+        <dt class="col-3">
             @Html.DisplayNameFor(model => model.CadastroAtivo)
         </dt>
-        <dd class = "col-9">
+        <dd class="col-9">
             @Html.DisplayFor(model => model.CadastroAtivo)
         </dd>
-        <dt class = "col-3">
+        <dt class="col-3">
             @Html.DisplayNameFor(model => model.Categoria)
         </dt>
-        <dd class = "col-9">
+        <dd class="col-9">
             @Html.DisplayFor(model => model.Categoria.CategoriaNome)
         </dd>
     </dl>
-    
+
     <form asp-action="Delete">
         <div class="row"></div>
         <div class="col-4">
